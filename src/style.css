@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Andika:ital@1&display=swap');
+:root {
+  --body-bg: #f1f1f1;
+  --header-bg: #edf6f9;
+  --add-bg: #e2e2e2;
+  --main-green: #28b9b5;
+  --main-blue: #4983ff;
+  --main-red: #ff5049;
+}
+body {
+  background-color: var(--body-bg);
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  font-family: 'Andika', sans-serif;
+}
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+header {
+  text-align: center;
+  flex-direction: column;
+  background-color: var(--header-bg);
+  padding: 20px;
+}
+header h1 {
+  text-transform: uppercase;
+  font-size: 40px;
+}
+.budget-display {
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+.budget-income,
+.budget-total,
+.budget-expenses {
+  width: 280px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: #fff;
+}
+.budget-income {
+  background-color: var(--main-green);
+  align-items: center;
+}
+.budget-total {
+  background-color: var(--main-blue);
+}
+.budget-expenses {
+  background-color: var(--main-red);
+}
+.title {
+  margin-right: auto;
+}
+.add-account {
+  flex-wrap: wrap;
+  background-color: var(--add-bg);
+  border-bottom: 1px solid #b4b4b4;
+  border-top: 1px solid #b4b4b4;
+  padding: 15px;
+  align-items: flex-start;
+}
+.add-type,
+.add-description,
+.add-amount {
+  border-radius: 5px;
+  border: 1px solid #b4b4b4;
+  outline: none;
+}
+.add-type {
+  font-size: 22px;
+  padding: 2px 5px;
+}
+.add-description,
+.add-amount {
+  padding: 11px 12px;
+}
+.add-description {
+  width: 280px;
+}
+.add-amount {
+  width: 140px;
+}
+.description-invalid,
+.amount-invalid {
+  text-align: center;
+  color: var(--main-red);
+  display: none;
+}
+.add-btn {
+  background: linear-gradient(to bottom, var(--main-blue) 5%, #3e6fd8 100%);
+  background-color: var(--main-blue);
+  border-radius: 6px;
+  border: 1px solid #dcdcdc;
+  display: inline-block;
+  cursor: pointer;
+  color: #fff;
+  padding: 12px 24px;
+}
+.add-btn:hover {
+  background: linear-gradient(to bottom, #3e6fd8 5%, var(--main-blue) 100%);
+  background-color: #557ed6;
+}
+.add-btn:active,
+.delete-icon:active,
+.edit-icon:active {
+  position: relative;
+  top: 2px;
+}
+.display {
+  background-color: var(--display-bg);
+  padding-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 15px;
+}
+.display-income,
+.display-expenses {
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.delete-icon,
+.edit-icon {
+  cursor: pointer;
+}
+.delete-icon:hover,
+.edit-icon:hover {
+  opacity: 0.8;
+}

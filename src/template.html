@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <header class="flex">
+      <h1>the budget app</h1>
+      <h2 class="date"></h2>
+      <div class="budget-display flex">
+        <div class="budget-income flex">
+          <div class="title">income</div>
+          <div class="amount income-amount"></div>
+        </div>
+        <div class="budget-total flex">
+          <div class="title">total</div>
+          <div class="amount total-amount"></div>
+        </div>
+        <div class="budget-expenses flex">
+          <div class="title">expenses</div>
+          <div class="amount expenses-amount"></div>
+        </div>
+      </div>
+    </header>
+    <section class="add-account flex">
+      <select class="add-type">
+        <option value="+" selected>+</option>
+        <option value="-">-</option>
+      </select>
+      <div>
+        <input type="text" class="add-description" placeholder="title" />
+        <p class="description-invalid">Enter a description</p>
+      </div>
+      <div>
+        <input type="number" min="0" class="add-amount" placeholder="amount" />
+        <p class="amount-invalid">Enter a value</p>
+      </div>
+      <button class="add-btn">add account</button>
+    </section>
+    <section class="display">
+      <div class="display-income flex all-accounts"></div>
+      <div class="display-expenses flex all-accounts"></div>
+    </section>
+  </body>
+</html>
